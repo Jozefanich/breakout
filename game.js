@@ -116,6 +116,7 @@ class player_object{
         requestAnimationFrame(this.anim);
     }
     check_collision(){
+        if(this.ball.y-this.ball.radius<=0){this.fup=true;this.width=20}
         if(this.ball.y>=rect.height-this.ball.radius*3){
             stop_set_timer(0);
             if(this.lives<1){   
