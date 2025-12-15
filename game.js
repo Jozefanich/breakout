@@ -160,7 +160,7 @@ class player_object{
         for(let i =0; i<this.bricks.length; i++){
             for(let j=0; j<this.bricks[i].length; j++){
                 let item = this.bricks[i][j];
-                if(this.ball.x >= item.x && this.ball.x<= item.x+item.width+1){
+                if(this.ball.x+this.ball.radius >= item.x && this.ball.x-this.ball.radius<= item.x+item.width+1){
                     if(this.ball.y-this.ball.radius<=item.y+item.height+1 && this.ball.y+this.ball.radius>=item.y){
                         item.hp -= 1;
                         if(item.hp <= 0) {
